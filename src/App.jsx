@@ -7,7 +7,6 @@ import PageNotFound from './pages/PageNotFound'
 import CheackOut from './pages/CheackOut';
 
 
-
 function App() {
  
   return (

@@ -27,7 +27,7 @@ function Header({ name }) {
                         className='cursor-pointer object-contain px-5 ' />
                 </div>
                 <div className='hidden sm:flex bg-yellow-400 hover:bg-yellow-500 h-10 rounded-md flex-grow cursor-pointer items-center'>
-                    <input type="text" className='p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4' />
+                    <input type="text" className='p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4 ' placeholder='Search..' />
                     <MagnifyingGlassIcon className="h-12 p-4 text-blue-500 " />
                 </div>
                 <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>

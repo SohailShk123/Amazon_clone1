@@ -13,7 +13,6 @@ export default function Home() {
   const getProductFeed = async()=>{
     const {data} = await axios('https://fakestoreapi.com/products')
     setData(data)
-    
   }
   useEffect(() =>{
 getProductFeed()

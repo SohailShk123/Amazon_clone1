@@ -18,10 +18,7 @@ function SignIn() {
       return
     }
     setError('')
-    console.log(value)
     const {user} = await signInWithEmailAndPassword(auth, value.email, value.password);
-    // await updateProfile(user, { displayName: value.name })
-    console.log("user", user)
     if(user.email){
       navigate('/')
     }

@@ -38,7 +38,7 @@ function SignIn() {
         onChange={(e) => setValue((pre) => ({ ...pre, password: e.target.value }))}
       />
       <button onClick={handleSubmit} className='btn mt-3'>Submit</button>
-      <p className='text-center font-bold'>Already have an account ?<span className='text-orange-600 ml-1 cursor-pointer' onClick={() => navigate('/signin')}>Login</span></p>
+      <p className='text-center font-bold'>Create new account ?<span className='text-orange-600 ml-1 cursor-pointer' onClick={() => navigate('/signup')}>Sign Up</span></p>
     </div>
   )
 }

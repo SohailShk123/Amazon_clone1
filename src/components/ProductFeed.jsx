@@ -5,7 +5,7 @@ const ProductFeed = ({ product, search }) => {
   return (
     <div className='grid grid-flow-row-dense
      md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 mx-auto'>
-      {product?.filter((item) =>
+      {product?.filter(item =>
       ( search.toLowerCase() == '' ? item : item.title.toLowerCase().includes(search)
       )).slice(0, 4).map(({ id, category, description, image, price, title }) => (
         <ProductCard key={id}

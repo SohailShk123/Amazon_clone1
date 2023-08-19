@@ -18,7 +18,7 @@ function Header({ name }) {
     const item = useSelector(selectItem)
 
     return (
-        <header>
+        <header className='sticky top-0'>
             {/* top nav  */}
             <div className="flex items-center bg-[#131921] p-1 py-2 flex-grow">
                 <div onClick={() => navigate('/')}

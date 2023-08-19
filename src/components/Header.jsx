@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/logo.png'
 import {
     MagnifyingGlassIcon, ShoppingCartIcon, Bars3Icon
@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import { selectItem } from '../redux/slice';
 
 
-function Header({ name }) {
+function Header({ name ,search,setSearch}) {
     const navigate = useNavigate()
     const handleSignOut = async () => {
         await signOut(auth)
@@ -20,14 +20,17 @@ function Header({ name }) {
     return (
         <header className='sticky top-0 z-50'>
             {/* top nav  */}
-            <div className="flex items-center bg-[#131921] p-1 py-2 flex-grow">
+            <div className="flex items-center bg-[#131921]  py-2 flex-grow">
                 <div onClick={() => navigate('/')}
-                    className='mt-2 flex items-center flex-grow sm:flex-grow-0 mr-2'>
+                    className='mt-2 flex items-center flex-grow sm:flex-grow-0'>
                     <img src={logo} alt="logo" width={150}
                         className='cursor-pointer object-contain px-5 ' />
                 </div>
-                <div className='hidden sm:flex bg-yellow-400 hover:bg-yellow-500 h-10 rounded-md flex-grow cursor-pointer items-center'>
-                    <input type="text" className='p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4 ' placeholder='Search..' />
+                <div className='flex bg-yellow-400 hover:bg-yellow-500 h-10 rounded-md flex-grow cursor-pointer items-center'>
+                    <input type="text" className='p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-1 md:px-5' placeholder='Search..'
+                    onChange={e=>setSearch(e.target.value)}
+                    value={search}
+                    />
                     <MagnifyingGlassIcon className="h-12 p-4 text-blue-500 " />
                 </div>
                 <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
@@ -37,7 +40,7 @@ function Header({ name }) {
                             <p className='font-extrabold md:text-sm'>Account & List</p>
                         </Link>
                     </div>
-                    <div className='link'>
+                    <div className='hidden md:inline-block link'>
                         <p>Return</p>
                         <p className='font-extrabold md:text-sm'>& Orders</p>
                     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.jpg'
 import {
     MagnifyingGlassIcon, ShoppingCartIcon, Bars3Icon
 } from '@heroicons/react/24/outline'
@@ -23,8 +23,8 @@ function Header({ name ,search,setSearch}) {
             <div className="flex items-center bg-[#131921]  py-2 flex-grow">
                 <div onClick={() => navigate('/')}
                     className='mt-2 flex items-center flex-grow sm:flex-grow-0'>
-                    <img src={logo} alt="logo" width={150}
-                        className='cursor-pointer object-contain px-5 ' />
+                    <img src={logo} alt="logo" width={150}  
+                        className='cursor-pointer object-contain px-5 '/>
                 </div>
                 <div className='flex bg-yellow-400 hover:bg-yellow-500 h-10 rounded-md flex-grow cursor-pointer items-center'>
                     <input type="text" className='p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-1 md:px-5' placeholder='Search..'
@@ -34,7 +34,7 @@ function Header({ name ,search,setSearch}) {
                     <MagnifyingGlassIcon className="h-12 p-4 text-blue-500 " />
                 </div>
                 <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
-                    <div onClick={handleSignOut} className='link'>
+                    <div onClick={handleSignOut} className='link hidden md:inline'>
                         <Link to='/signup'>
                             <p>{name ? (`Welcome ${name}`) : ("Sign IN")}</p>
                             <p className='font-extrabold md:text-sm'>Account & List</p>
@@ -45,8 +45,8 @@ function Header({ name ,search,setSearch}) {
                         <p className='font-extrabold md:text-sm'>& Orders</p>
                     </div>
                     <div onClick={() => navigate('/cheackout')} className='link relative flex items-center'>
-                        <span className='absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 rounded-full text-center text-black font-bold'>{item.length}</span>
-                        <ShoppingCartIcon className='h-10' />
+                        <span className='absolute top-0 right-0 h-3 w-3 md:right-10 md:h-4 md:w-4 bg-yellow-400 rounded-full text-center text-black font-bold'>{item.length}</span>
+                        <ShoppingCartIcon className='h-6 md:h-10' />
                         <p className='hidden md:inline font-extrabold md:text-sm mt-2 '>Basket</p>
                     </div>
                 </div>

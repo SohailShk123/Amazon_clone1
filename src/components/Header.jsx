@@ -23,8 +23,10 @@ function Header({ name ,search,setSearch}) {
             <div className="flex items-center bg-[#131921]  py-2 flex-grow">
                 <div onClick={() => navigate('/')}
                     className='mt-2 flex items-center flex-grow sm:flex-grow-0'>
-                    <img src={logo} alt="logo" width={150}
-                        className='cursor-pointer object-contain px-5 ' />
+                    {/* <img src={logo} alt="logo" width={150} */}
+                        {/* className='cursor-pointer object-contain px-5 ' /> */}
+                     <  h1 className='text-white font-bold text-3xl cursor-pointer px-5'>Gift Shop</h1>
+
                 </div>
                 <div className='flex bg-yellow-400 hover:bg-yellow-500 h-10 rounded-md flex-grow cursor-pointer items-center'>
                     <input type="text" className='p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-1 md:px-5' placeholder='Search..'
